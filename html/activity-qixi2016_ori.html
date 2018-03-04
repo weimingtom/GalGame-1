@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-itunes-app" content="app-id=736536022, affiliate-data=myAffiliateData,app-argument=myArgs"/>
+    <title>Bilibili七夕之约 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title>
+
+    <!--分享、评论 需引入CSS-->
+    <link type="text/css" rel="stylesheet" href="http://static.hdslb.com/css/core-v5/page-core.css">
+    <!--播放器 需引入CSS-->
+    <link type="text/css" rel="stylesheet" href="http://static.hdslb.com/mobile/css/mobile.css">
+    <!--【用客户端打开】&【视频播放】 需引入CSS-->
+    <link type="text/css" rel="stylesheet" href="http://static.hdslb.com/css/simple.v2.min.css">
+    <link type="text/css" rel="stylesheet" href="http://activity.hdslb.com/zzjs/20160801qixi/css/index.css">
+    <script type="text/javascript" src="http://static.hdslb.com/js/jquery.min.js"></script>
+
+    <!--登录、评论等需引入JS-->
+    <script type="text/javascript" src="http://static.hdslb.com/js/core-v5/base.core.js"></script>
+
+    <!--【用客户端打开】&【视频播放】&【评论】功能 需引入JS-->
+    <script type="text/javascript" src="http://static.hdslb.com/js/simple.v2.min.js"></script>
+</head>
+<body>
+<!--判断是否登录 start-->
+<aside class="modal-login default-hidden">
+    <div class="login-div">
+        <a href="https://account.bilibili.com/login?gourl=http://www.bilibili.com/html/activity-qixi2016.html" title="点击跳转至登录页面"></a>
+    </div>
+</aside>
+<!--判断是否登录 end-->
+<header>
+   <div class="game-loading"></div>
+</header>
+<main>
+    <div class="main-container bg-start">
+        <div class="game-wrap hidden">
+            <div class="mask hidden"></div>
+            <div class="dialogue">
+                <div class="text-content"><p></p></div>
+                <div class="next-step"></div>
+            </div>
+            <div class="select-branch hidden"></div>
+            <img class="girls-show hidden" src="">
+            <div class="show-surprise-wrap hidden">
+                <div class="show-surprise"></div>
+                <div class="surprise hidden"></div>
+            </div>
+        </div>
+        <div class="end-show-wrap hidden">
+           <div class="end-container">
+               <div class="end-show">
+                   <div class="end-title"></div>
+                   <div class="end-text">恭喜你！获得<span class="js-title"></span>结局！</div>
+                   <div class="end-text">已有<span class="strong-text"></span>人达成此结局</div>
+                   <div class="button-list">
+                       <a class="btn-download" href="javascript:;" target="_blank"><img  class="w-100" src="" alt=""></a>
+                       <img class="btn-play-again" src="http://activity.hdslb.com/zzjs/20160801qixi/img/replay-button.png">
+                       <img class="btn-share"  src="http://activity.hdslb.com/zzjs/20160801qixi/img/share-button.png">
+                   </div>
+               </div>
+           </div>
+        </div>
+       <div class="speed-up hidden">加速</div>
+      <div class="start-wrap">
+          <img class="btn-start" src="http://activity.hdslb.com/zzjs/20160801qixi/img/start-button.png" alt="">
+          <img class="bilibili-icon" src="http://activity.hdslb.com/zzjs/20160801qixi/img/bilibili-01.png" alt="">
+      </div>
+  </div>
+</main>
+
+
+
+<!--登录、分享、视频播放 需引入JS 放在dom结构后面 否则报错获取不到scrollWidth-->
+<script src="http://static.hdslb.com/mobile/js/base.mobile.js"></script>
+<!--【分享js】-->
+<script type="text/javascript" src="http://static.hdslb.com/mstation/monkey/biliShare/js/biliShare.mobile.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //登录
+        loadLoginStatus();
+    });
+</script>
+<script type="text/javascript" src="http://activity.hdslb.com/zzjs/20160801qixi/js/build.min.js"></script>
+<!--埋点-->
+<div style="display:none">
+    <script type="text/javascript">
+        $(function(){
+            if(window.Zepto) {
+                $.getScript('http://data.bilibili.com/rec.js', 'body');
+                $.getScript('http://s11.cnzz.com/stat.php?id=2724999&web_id=2724999', 'body');
+            } else {
+                $('<scr'+'ipt type="text/javascript" src="http://data.bilibili.com/rec.js"></scri'+'pt>').appendTo('body');
+                $('<scr'+'ipt type="text/javascript" src="http://s11.cnzz.com/stat.php?id=2724999&web_id=2724999 " charset="UTF-8"></scri'+'pt>').appendTo('body');
+            }
+        });
+    </script>
+</div>
+</body>
+</html>

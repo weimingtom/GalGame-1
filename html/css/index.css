@@ -1,0 +1,348 @@
+@charset "UTF-8";
+html,
+body,
+div,
+ul,
+li,
+a,
+img,
+h3,
+object,
+p {
+  padding: 0;
+  margin: 0; }
+
+ul,
+li {
+  list-style: none; }
+
+html, body {
+  height: 100%;
+  font: 80% "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB",宋体,sans-serif;
+  min-width: 320px; }
+
+.hidden {
+  display: none; }
+
+.in-bl {
+  display: inline-block; }
+
+.block {
+  display: block; }
+
+.w-30 {
+  width: 30%; }
+
+.w-80 {
+  width: 80%; }
+
+.w-100 {
+  width: 100%; }
+
+.mt-1rem {
+  margin-top: 1rem; }
+
+.game-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000 url("../img/loading.gif") center no-repeat;
+  background-size: 88%;
+  z-index: 99999; }
+
+.game-loading:after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -10%;
+  width: 20%;
+  height: 91px;
+  background: url("../img/bilibili-02.png") center no-repeat;
+  background-size: 100%; }
+
+main {
+  height: 100%; }
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999; }
+
+.main-container {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  background: center no-repeat;
+  background-size: 100%;
+  overflow: hidden; }
+  .main-container .game-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background: #fff center no-repeat;
+    background-size: 100% 100%;
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
+    .main-container .game-wrap .dialogue {
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+      width: 100%;
+      height: 30%;
+      background: url("../img/footer-dialogue.png") center no-repeat;
+      background-size: 100% 100%;
+      color: #cff2ff;
+      font-size: 1.2rem;
+      font-weight: bold; }
+      .main-container .game-wrap .dialogue .text-content {
+        margin: 12% 1rem 1rem; }
+        .main-container .game-wrap .dialogue .text-content p:first-child {
+          margin-top: 0; }
+        .main-container .game-wrap .dialogue .text-content p {
+          margin-top: 1rem; }
+    .main-container .game-wrap .next-step {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      width: 10%;
+      height: 30%;
+      background: url("../img/next.png") center no-repeat;
+      background-size: 100%; }
+    .main-container .game-wrap .select-branch {
+      position: absolute;
+      top: 15%;
+      z-index: 1001;
+      width: 100%;
+      color: #d0f1ff;
+      font-weight: bold;
+      font-size: 1.3rem; }
+      .main-container .game-wrap .select-branch .select-item {
+        width: 80%;
+        margin: 2rem auto 0;
+        height: 5rem;
+        line-height: 5rem;
+        background: url("../img/select-border.png") center no-repeat;
+        background-size: 100% 100%;
+        text-align: center; }
+    .main-container .game-wrap .girls-show {
+      position: absolute;
+      bottom: -32%;
+      left: 50%;
+      margin-left: -38%;
+      width: 80%; }
+    .main-container .game-wrap .TV-show {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50%;
+      width: 100%; }
+    .main-container .game-wrap .show-surprise-wrap {
+      position: relative;
+      width: 100%;
+      height: 20%; }
+    .main-container .game-wrap .show-surprise {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      background-color: transparent; }
+    .main-container .game-wrap .surprise {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 100px;
+      height: 105px;
+      z-index: 10;
+      background: url("../img/surprise1.png") center no-repeat;
+      background-size: 100%;
+      -webkit-transform-origin: right top;
+      transform-origin: right top;
+      -webkit-animation: painted-eggshell 0.8s ease-out;
+      animation: painted-eggshell 0.8s ease-out; }
+
+@keyframes painted-eggshell {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  10% {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3); }
+  20% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); }
+  30% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  40% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  50% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); }
+  60% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  80% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  90% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+  .main-container .end-show-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100%; }
+    .main-container .end-show-wrap .end-container {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: url("../img/bg-end.png") center no-repeat;
+      background-size: cover;
+      height: 400px; }
+    .main-container .end-show-wrap .end-show {
+      margin: 70px auto 0; }
+    .main-container .end-show-wrap .end-title {
+      width: 50%;
+      margin: 0 auto 1rem;
+      background: url("../img/end-border.png") center no-repeat;
+      background-size: 100%;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      color: #5c88ec;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, 0 -1px 1px #fff, -1px 0 1px #fff; }
+    .main-container .end-show-wrap .end-text {
+      font-size: 1.2rem;
+      color: #feffff;
+      text-shadow: 2px 0 1px #5c88ec, 0 1px 1px #5c88ec, 0 -1px 1px #5c88ec, -1px 0 1px #5c88ec;
+      text-align: center;
+      margin-bottom: 1rem; }
+    .main-container .end-show-wrap .strong-text {
+      padding: 0 5px;
+      font-weight: bold;
+      font-size: 1.4rem; }
+    .main-container .end-show-wrap .button-list {
+      width: 100%;
+      margin: 3.3rem auto 0;
+      text-align: center; }
+    .main-container .end-show-wrap .btn-download, .main-container .end-show-wrap .btn-play-again, .main-container .end-show-wrap .btn-share {
+      display: inline-block;
+      width: 20%;
+      margin-left: 1rem; }
+  .main-container .speed-up {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 20;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    font-size: .8rem;
+    color: #feffff;
+    text-shadow: 2px 0 1px #5c88ec, 0 1px 1px #5c88ec, 0 -1px 1px #5c88ec, -1px 0 1px #5c88ec; }
+  .main-container .start-wrap {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    z-index: 101; }
+  .main-container .btn-start {
+    width: 80%;
+    display: block;
+    margin: 0 auto; }
+  .main-container .bilibili-icon {
+    width: 30%;
+    margin: 2rem auto 1rem;
+    display: block; }
+
+.bg-start {
+  background: url("../img/bg-start.jpg") center no-repeat;
+  background-size: 100% 100%; }
+
+.bg-iPad {
+  background: url("../img/bg-PAD.jpg") center no-repeat;
+  background-size: 100% 100%; }
+
+@media screen and (min-width: 768px) {
+  .bg-start {
+    background: url("../img/bg-start-ipad.jpg") center no-repeat;
+    background-size: 100% 100%; }
+  .main-container .btn-start {
+    width: 40%; }
+  .main-container .bilibili-icon {
+    width: 10%;
+    margin: 3rem auto 1rem; }
+  .main-container .game-wrap {
+    width: 43%; }
+    .main-container .game-wrap .dialogue {
+      font-size: 1.5rem; }
+    .main-container .game-wrap .next-step {
+      width: 55px;
+      height: 58px; }
+    .main-container .game-wrap .select-branch {
+      top: 20%;
+      font-size: 1.5rem; }
+  .main-container .speed-up {
+    left: 30%; }
+  .main-container .end-show-wrap {
+    left: 28%;
+    width: 44%; }
+  .game-loading {
+    background-size: 40%; }
+  .game-loading:after {
+    margin-left: -4%;
+    width: 8%; } }
+
+/*隐藏下载客户端提示*/
+#b_app_link {
+  display: none !important; }
+
+/*评论*/
+footer.comment {
+  padding: 0; }
+
+.bilibili-comment .c_order {
+  margin: 0; }
+
+.bilibili-comment .dcmp_content {
+  margin-top: 10px; }
+
+.comm {
+  padding-top: 0; }
+
+.bilibili-comment.mobile {
+  padding: 10px; }
+
+.bilibili-comment ul.comm_list {
+  text-align: left; }
+
+.bilibili-comment {
+  padding: 10px; }
+
+.bilibili-comment .c_order .pagelistbox {
+  display: block; }
